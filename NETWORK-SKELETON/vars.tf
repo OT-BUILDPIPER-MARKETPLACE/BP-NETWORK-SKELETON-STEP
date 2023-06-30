@@ -1,7 +1,7 @@
 variable "region" {
   type        = string
   description = "Region"
-  default     = "ap-southeast-1"
+ 
 }
 
 variable "acm_certificate_domain" {
@@ -19,7 +19,7 @@ variable "statuses" {
 variable "cidr_block" {
   description = "The CIDR block for the VPC."
   type        = string
-  default     = "10.0.0.0/23"
+ 
 }
 
 variable "vpc_name" {
@@ -40,7 +40,7 @@ variable "tags" {
 variable "public_subnets_cidr" {
   description = "CIDR list for public subnet"
   type        = list(string)
-  default = [ "value" ]
+
 }
 
 variable "private_subnets_cidr" {
