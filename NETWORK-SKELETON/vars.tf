@@ -4,18 +4,6 @@ variable "region" {
  
 }
 
-variable "acm_certificate_domain" {
-  type        = string
-  description = "(optional) describe your variable"
-  default     = "www.mydevopsprojects.co.in"
-}
-
-variable "statuses" {
-  type        = list(string)
-  description = "(optional) describe your variable"
-  default     = ["ISSUED"]
-}
-
 variable "cidr_block" {
   description = "The CIDR block for the VPC."
   type        = string
