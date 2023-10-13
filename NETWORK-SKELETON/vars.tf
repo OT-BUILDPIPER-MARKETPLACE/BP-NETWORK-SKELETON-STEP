@@ -1,13 +1,13 @@
 variable "region" {
   type        = string
   description = "Region"
- 
+
 }
 
 variable "cidr_block" {
   description = "The CIDR block for the VPC."
   type        = string
- 
+
 }
 
 variable "vpc_name" {
@@ -31,7 +31,12 @@ variable "public_subnets_cidr" {
 
 }
 
-variable "private_subnets_cidr" {
+variable "App_private_subnets_cidr" {
+  description = "CIDR list for private subnet"
+  type        = list(string)
+}
+
+variable "DB_private_subnets_cidr" {
   description = "CIDR list for private subnet"
   type        = list(string)
 }
@@ -44,12 +49,12 @@ variable "avaialability_zones" {
 variable "pvt_zone_name" {
   description = "Name of private zone"
   type        = string
-  default = null
+  default     = null
 }
 
 variable "logs_bucket" {
   description = "Name of bucket where we would be storing our logs"
-  default = null
+  default     = null
 }
 
 variable "enable_dns_support" {
@@ -84,7 +89,7 @@ variable "enable_vpc_logs" {
 
 variable "logs_bucket_arn" {
   description = "Name of bucket where we would be storing our logs"
-  default = null
+  default     = null
 }
 
 variable "enable_alb_logging" {
@@ -105,7 +110,7 @@ variable "public_web_sg_name" {
 variable "alb_certificate_arn" {
   description = "Cretificate arn for alb"
   type        = string
-  default =  null
+  default     = null
 }
 
 variable "enable_aws_route53_zone_resource" {
@@ -128,7 +133,7 @@ variable "enable_public_web_security_group_resource" {
 variable "enable_nat_privateRouteTable_PrivateSubnets_resource" {
   type        = bool
   description = "This variable is used to create NAT, Private Route Table and Private Subnets"
-  default     =  true
+  default     = true
 }
 
 
@@ -141,41 +146,55 @@ variable "enable_igw_publicRouteTable_PublicSubnets_resource" {
 variable "alb_name" {
   type        = string
   description = "Name of ALB"
-  default = null
+  default     = null
 }
 
-variable "pvt_subnet_name" {
+# variable "pvt_subnet_name" {
+#   type        = any
+#   description = "Name of private subnets"
+#   default     = [
+#     "myfojo-dev-pvt",
+#     "myfojo-prod-pvt"
+#   ]
+
+# }
+
+variable "DB_pvt_subnet_name" {
   type        = string
   description = "Name of private subnets"
-  default = "pvt-subnet"
-
 }
+
+variable "App_pvt_subnet_name" {
+  type        = string
+  description = "Name of private subnets"
+}
+
 variable "pvt_rt_name" {
   type        = string
   description = "Name of Pvt Rpoute table"
-  default = "pvt-rt"
+  default     = "pvt-rt"
 }
 variable "nat_name" {
   type        = string
   description = "Name of Nat Gateway"
-  default = "nat-1"
+  default     = "nat-1"
 }
 
 
 variable "pub_subnet_name" {
   type        = string
   description = "public subnet name"
-  default = "pub-subnet"
+  default     = "pub-subnet"
 }
 
 variable "pub_rt_name" {
   type        = string
   description = "Public route table name"
-  default = "pub-rt"
+  default     = "pub-rt"
 }
 variable "igw_name" {
   type        = string
   description = "Internet Gateway name"
-  default = "igw"
+  default     = "igw"
 }
 
