@@ -32,3 +32,4 @@ module "network_skeleton" {
   enable_pub_alb_resource                              = var.enable_pub_alb_resource 
   enable_aws_route53_zone_resource                     = var.enable_aws_route53_zone_resource 
 }
+#test
