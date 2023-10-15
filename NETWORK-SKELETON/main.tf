@@ -5,7 +5,7 @@ provider "aws" {
 
 module "network_skeleton" {
   source               = "OT-CLOUD-KIT/network-skeleton/aws"
-  version              = "1.0.1"
+  version              = "1.0.2"
   vpc_name             = var.vpc_name
   cidr_block           = var.cidr_block
   enable_dns_hostnames = var.enable_dns_hostnames
