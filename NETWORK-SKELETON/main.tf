@@ -4,7 +4,7 @@ provider "aws" {
 
 
 module "network_skeleton" {
-source = "./terraform-aws-network-skeleton/"
+source = "git::https://github.com/OT-CLOUD-KIT/terraform-aws-network-skeleton.git?ref=feature-subnet"
 #  source               = "OT-CLOUD-KIT/network-skeleton/aws"
 #  version              = "1.0.2"
   vpc_name             = var.vpc_name
