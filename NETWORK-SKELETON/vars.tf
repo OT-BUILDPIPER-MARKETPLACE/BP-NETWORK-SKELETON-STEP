@@ -36,12 +36,29 @@ variable "App_private_subnets_cidr" {
   type        = list(string)
 }
 
+variable "App_private_subnets_cidr1" {
+  description = "CIDR list for private subnet"
+  type        = list(string)
+}
+
 variable "DB_private_subnets_cidr" {
   description = "CIDR list for private subnet"
   type        = list(string)
 }
 
+
+variable "DB_private_subnets_cidr1" {
+  description = "CIDR list for private subnet"
+  type        = list(string)
+}
+
 variable "avaialability_zones" {
+  description = "List of avaialability zones"
+  type        = list(string)
+}
+
+
+variable "avaialability_zones1" {
   description = "List of avaialability zones"
   type        = list(string)
 }
