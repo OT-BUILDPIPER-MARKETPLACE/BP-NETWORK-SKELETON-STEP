@@ -39,6 +39,7 @@ variable "App_private_subnets_cidr" {
 variable "App_private_subnets_cidr1" {
   description = "CIDR list for private subnet"
   type        = list(string)
+  default     = []
 }
 
 variable "DB_private_subnets_cidr" {
@@ -50,6 +51,7 @@ variable "DB_private_subnets_cidr" {
 variable "DB_private_subnets_cidr1" {
   description = "CIDR list for private subnet"
   type        = list(string)
+  default     = []
 }
 
 variable "avaialability_zones" {
@@ -61,6 +63,7 @@ variable "avaialability_zones" {
 variable "avaialability_zones1" {
   description = "List of avaialability zones"
   type        = list(string)
+  default     = []
 }
 
 variable "pvt_zone_name" {
@@ -150,9 +153,14 @@ variable "enable_public_web_security_group_resource" {
 variable "enable_nat_privateRouteTable_PrivateSubnets_resource" {
   type        = bool
   description = "This variable is used to create NAT, Private Route Table and Private Subnets"
-  default     = true
 }
 
+
+
+variable "enable_multiple_nat_privateRouteTable_PrivateSubnets_resource" {
+  type        = bool
+  description = "This variable is used to create NAT, Private Route Table and Private Subnets"
+}
 
 variable "enable_igw_publicRouteTable_PublicSubnets_resource" {
   type        = bool
