@@ -34,8 +34,8 @@ source = "git::https://github.com/OT-CLOUD-KIT/terraform-aws-network-skeleton.gi
   alb_name                                             = var.alb_name
   enable_igw_publicRouteTable_PublicSubnets_resource   = var.enable_igw_publicRouteTable_PublicSubnets_resource
   enable_nat_privateRouteTable_PrivateSubnets_resource = var.enable_nat_privateRouteTable_PrivateSubnets_resource
+  enable_multiple_nat_privateRouteTable_PrivateSubnets_resource = var.enable_multiple_nat_privateRouteTable_PrivateSubnets_resource
   enable_public_web_security_group_resource            = var.enable_public_web_security_group_resource
   enable_pub_alb_resource                              = var.enable_pub_alb_resource
   enable_aws_route53_zone_resource                     = var.enable_aws_route53_zone_resource
 }
-
