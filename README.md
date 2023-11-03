@@ -7,9 +7,8 @@ I'll setup NETWORK_SKELETON
 * Build the docker image
 
 ```
-git submodule init
-git submodule update
 docker build -t ot/tf-network-skeleton-step:0.1 .
+docker tag ot/tf-network-skeleton-step:0.1 registry.buildpiper.in:0.1
 ```
 
 * Do local testing via image only
