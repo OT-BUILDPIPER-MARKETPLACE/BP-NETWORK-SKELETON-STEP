@@ -33,20 +33,24 @@ variable "avaialability_zones" {
 
 variable "public_web_sg_name" {
   type = string
+  default = "test-pub-sg"
 }
 
 variable "logs_bucket" {
   description = "Name of bucket where we would be storing our logs"
   type        = string
+  default     = null
 }
 
 variable "logs_bucket_arn" {
   description = "ARN of bucket where we would be storing vpc our logs"
+  default     = null
 }
 
 variable "pvt_zone_name" {
   description = "Name of private zone"
   type        = string
+  default     = null
 }
 
 variable "enable_dns_support" {
